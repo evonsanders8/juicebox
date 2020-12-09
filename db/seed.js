@@ -45,7 +45,10 @@ async function dropTables() {
         CREATE TABLE users (
           id SERIAL PRIMARY KEY,
           username varchar(255) UNIQUE NOT NULL,
-          password varchar(255) NOT NULL
+          password varchar(255) NOT NULL,
+          name VARCHAR(255) NOT NULL,
+          location VARCHAR(255) NOT NULL,
+          active BOOLEAN DEFAULT true
         );
       `);
   
@@ -71,9 +74,9 @@ async function dropTables() {
     try {
       console.log("Starting to create users...");
   
-      const albert = await createUser({ username: 'albert', password: 'bertie99' });
-      const sandra = await createUser({ username: 'sandra', password: 'imposter_sandra' });
-      const glamgal = await createUser({ username: 'glamgal', password: 'imposter_glamgal' });
+      const albert = await createUser({ username: 'albert', password: 'bertie99' ,'name':'albert', 'location': 'california'});
+      const sandra = await createUser({ username: 'sandra', password: 'imposter_sandra', 'name':'sandra', 'location': 'california' });
+      const glamgal = await createUser({ username: 'glamgal', password: 'imposter_glamgal', 'name':'glamgal', 'location': 'california'});
       console.log(albert);
    // console.log(albertTwo, "alerbetTwo")
   
