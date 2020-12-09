@@ -1,0 +1,29 @@
+{
+  "name": "juicebox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "seed:dev": "nodemon ./db/seed.js",
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+   
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evonsanders8/juicebox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evonsanders8/juicebox/issues"
+  },
+  "homepage": "https://github.com/evonsanders8/juicebox#readme",
+  "dependencies": {
+    "pg": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
